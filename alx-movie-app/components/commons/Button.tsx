@@ -1,9 +1,12 @@
-import { ReactNode } from "react";
+import { ButtonProps } from "@/interfaces";
 
-const Button: React.FC<{ children: ReactNode }> = ({ children }) => {
+const Button: React.FC<ButtonProps> = ({ title, action }) => {
   return (
-    <button className="bg-primary text-white px-4 py-2 rounded-md">
-      {children}
+    <button
+      onClick={action}
+      className="px-8 py-2 border-2 border-[#E2D609] rounded-full hover:bg-[#E2D609] hover:text-black transition-colors duration-300"
+    >
+      {title}
     </button>
   );
 };
